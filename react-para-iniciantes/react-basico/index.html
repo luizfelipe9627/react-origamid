@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Básico</title>
+
+  <!-- Carrega o React, React Dom e Babel. -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Não use em produção: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <!-- O conteúdo será renderizado no elemento com o ID root. -->
+  <div id="root"></div>
+
+  <!-- Está sendo usado o Babel para transpilar(converter) o código JSX para JavaScript. -->
+  <script type="text/babel">
+    // Cria um componente chamado Button.
+    const Button = () => {
+      // Retorna um botão com o texto Comprar.
+      return <button>Comprar</button>
+    }
+
+    // Cria um componente chamado MainNav.
+    const MainNav = () => {
+      // Retorna uma navegação com os links Home, Sobre e Contato.
+      return <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    }
+
+    // Cria um componente chamado Products.
+    const Products = () => {
+      // Cria duas variáveis com os nomes dos produtos.
+      const product1 = "Camisa";
+      const product2 = "Bermuda";
+
+      // Cria um componente chamado handleClick que recebe um evento como parâmetro.
+      function handleClick(event) {
+        console.log("Comprou: " + event.target.innerText); // Exibe o evento no console.
+      }
+
+      // Retorna dois botões com os textos Camisa e Bermuda e um preço aleatório gerado pelo Math.random() * 100.
+      // Os { } são usados para inserir código JavaScript dentro do JSX.
+      // O onClick é um evento que é disparado quando o usuário clica no botão, ele recebe como parâmetro uma função que será executada quando o evento for disparado.
+      return <div>
+        <button onClick={handleClick}>{product1} - R${Math.random() * 100}</button>
+        <button onClick={handleClick}>{product2} - R${Math.random() * 100}</button>
+      </div>
+    }
+
+    // Cria um componente chamado Button.
+    const Shopping = () => {
+      // O useState é um hook que é usado para criar estados em componentes funcionais, ele recebe como parâmetro o valor inicial do estado e retorna um array[estado, atualizador] com o valor do estado e uma função que vai ser usada para alterar/atualizar o estado.
+      const [count, setCount] = React.useState(0); // Cria um estado chamado count e uma função chamada setCount que vai ser usada para alterar o estado count, o valor inicial do estado count é 0.
+
+      // Cria uma função chamada handleClick que vai ser usada para alterar/atualizar o estado count.
+      // A função tem que estar dentro do componente para que o estado count possa ser alterado/atualizado.
+      function handleClick() {
+        setCount(count + 1); // Está sendo usado a função setCount para alterar/atualizar o estado count, o valor do estado count vai ser incrementado em 1.
+      }
+
+      // Retorna um botão com o texto Comprar: e o valor do estado count esse botão recebe um evento onClick que vai ser disparado quando o usuário clicar no botão, esse evento recebe como parâmetro a função handleClick. Retorna também um parágrafo com o texto Total: e o valor do estado count e um parágrafo com o texto Preço: e o valor do estado count multiplicado por 250.
+      return <div>
+        <button onClick={handleClick}>Comprar: {count}</button>
+        <p>Total: {count}</p>
+        <p>Preço: {count * 250}</p>
+      </div>
+    }
+
+    // Cria um componente chamado App que vai ser o componente principal, ou seja, o componente que vai ser sempre renderizado na tela.
+    const App = () => {
+      // Retorna um H1 com o texto Produtos e os componentes MainNav, Products e Button.
+      return <div>
+        <h1>Produtos</h1>
+        <MainNav />
+        <Products />
+        <Button />
+        <Shopping />
+      </div>
+    }
+
+    const rootElement = document.getElementById("root"); // Seleciona o elemento com o id root e armazena na variável chamada rootElement.
+    const root = ReactDOM.createRoot(rootElement); // O ReactDOM.createRoot é usado para criar uma raiz de renderização, ele recebe como parâmetro o elemento que será renderizado, nesse caso o rootElement e armazena na variável chamada root.
+
+    root.render(<App />); // O render é um método usado para renderizar o conteúdo do componente, ele recebe como parâmetro o componente que será renderizado, nesse caso o App.
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React para Iniciantes</title>
+
+  <!-- Carrega o React, React Dom e Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Não use em produção: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <!-- O conteúdo será renderizado no elemento com o ID root. -->
+  <div id="root"></div>
+
+  <!-- Está sendo usado o Babel para transpilar(converter) o código JSX para JavaScript. -->
+  <script type="text/babel">
+    // Cria um componente chamado Button.
+    // Sempre que for criar um componente, o nome dele deve começar com letra maiúscula.
+    function Button() {
+      const [total, setTotal] = React.useState(0); // Cria um estado chamado total e uma função chamada setTotal que vai ser usada para alterar o estado total, o valor inicial do estado total é 0.
+
+      // Retorna um botão com o texto Adicionar. 
+      // O onClick é um evento que vai ser disparado quando o botão for clicado, ele recebe como parâmetro uma função que vai ser executada quando o evento for disparado, nesse caso a função anônima vai chamar a função setTotal e vai passar como parâmetro o valor do estado total + 1, criando assim um contador.
+      return <button onClick={() => setTotal(total + 1)}>Adicionar {total}</button>
+    }
+
+    // Cria um componente chamado App que vai ser o componente principal, ou seja, o componente que vai ser sempre renderizado na tela.
+    function App() {
+      // Retorna um H1 com o texto Aplicativo React e o componente Button que foi criado anteriormente.
+      // Os componentes quando são criados devem ser chamados como se fossem uma tag HTML, nesse caso o Button é chamado como se fosse uma tag HTML.
+      return <div>
+        <h1>Aplicativo React</h1>
+        <Button />
+        <Button />
+      </div>
+    }
+
+    const rootElement = document.getElementById("root"); // Seleciona o elemento com o id root e armazena na variável chamada rootElement.
+    const root = ReactDOM.createRoot(rootElement); // O ReactDOM.createRoot é usado para criar uma raiz de renderização, ele recebe como parâmetro o elemento que será renderizado, nesse caso o rootElement e armazena na variável chamada root.
+
+    root.render(<App />); // O render é um método usado para renderizar o conteúdo do componente, ele recebe como parâmetro o componente que será renderizado, nesse caso o App.
+  </script>
+</body>
+
+</html>

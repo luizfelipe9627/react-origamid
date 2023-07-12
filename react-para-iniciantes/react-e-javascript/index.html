@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React e JavaScript</title>
+
+  <!-- Carrega o React, React Dom e Babel. -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Não use em produção: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="app-javascript">
+    <p>Total: <span id="total"></span></p>
+    <p>Preço: R$ <span id="price"></span></p>
+    <button id="button">Comprar</button>
+  </div>
+
+  <!-- Está sendo o JavaScript puro para manipular o DOM. -->
+  <script type="application/javascript">
+    // Está selecionando os elementos do DOM pelo ID e armazenando em variáveis.
+    const total = document.getElementById("total");
+    const price = document.getElementById("price");
+    const button = document.getElementById("button");
+
+    let count = 1; // Cria uma variável com o valor 1.
+
+    // Cria uma função chamada updateValues responsável por atualizar os valores dos elementos do DOM.
+    function updateValues(count) {
+      total.innerText = count; // Atualiza o texto do elemento com o ID total com o valor da variável count passado como parâmetro da funçao handleClick.
+      price.innerText = count * 250; // Atualiza o texto do elemento com o ID price com o valor da variável count passado como parâmetro da funçao handleClick multiplicado por 250.
+    }
+
+    // Chama a função fazendo com que os valores dos elementos do DOM comecem com o valor inicial.
+    updateValues(count); // Chama a função updateValues e passa o valor da variável count como parâmetro.
+
+    // Cria uma função chamada handleClick responsável por incrementar a variável count e chamar a função updateValues.
+    function handleClick(event) {
+      count++; // Incrementa a variável count.
+      updateValues(count); // Chama a função updateValues responsável por atualizar os valores dos elementos do DOM e passa o valor da variável count como parâmetro.
+    }
+
+    // Adiciona um evento de clique no botão que ao ser clicado executa a função handleClick.
+    button.addEventListener("click", handleClick);
+  </script>
+
+  <!-- O conteúdo será renderizado no elemento com o ID app-react. -->
+  <div id="app-react"></div>
+
+  <!-- Está sendo usado o Babel para transpilar(converter) o código JSX para JavaScript. -->
+  <script type="text/babel">
+    // Cria um componente chamado Shopping.
+    const Shopping = () => {
+      const [count, setCount] = React.useState(1); // Cria uma variável count e uma função setCount que é responsável por atualizar o valor da variável count, o valor inicial da variável count é 1.
+
+      // Criado uma função chamada handleClick que é responsável por incrementar a variável count.
+      function handleClick() {
+        setCount(count + 1); // Atualiza o estado/valor da variável count.
+      }
+
+      // Retorna um parágrafo com o texto Total: e outro com o texto Preço: R$ e um botão com o texto Comprar tendo um evento de clique que ao ser clicado que executa a função handleClick.
+      return <div>
+        <p>Total: {count}</p>
+        <p>Preço: R$ {count * 250}</p>
+        <button onClick={handleClick}>Comprar</button>
+      </div>
+    }
+
+    // Atalho para criar o componente React principal que vai ser responsável por renderizar os outros componentes no DOM.
+    ReactDOM.createRoot(document.getElementById("app-react")).render(
+      <Shopping />
+    );
+  </script>
+</body>
+
+</html>

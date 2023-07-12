@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferramentas de Automoção</title>
+</head>
+
+<body>
+  <!-- O conteúdo será renderizado no elemento com o ID root .-->
+  <div id="root"></div>
+
+  <!-- Puxa o script final que foi gerado pelo ESBuild. -->
+  <script src="./main.js"></script>
+
+  <script>
+    // Cria um evento que escuta as mudanças no arquivo main.js e recarrega a página quando o arquivo for alterado.
+    new EventSource('/esbuild').addEventListener('change', () =>
+      location.reload(), // Recarrega a página.
+    );
+  </script>
+</body>
+
+</html>
