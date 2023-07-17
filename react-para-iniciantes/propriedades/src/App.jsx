@@ -1,4 +1,5 @@
-import React from "react"; // Importa o React.
+// Importa o React.
+import React from "react";
 
 // Importa os componentes.
 import Form from "./Form/Form";

@@ -1,4 +1,5 @@
-import React from "react"; // Importa o React.
+// Importa o React.
+import React from "react";
 
 // Criado um componente chamado App.
 const App = () => {
