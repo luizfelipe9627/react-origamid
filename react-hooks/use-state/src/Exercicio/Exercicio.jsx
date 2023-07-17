@@ -1,4 +1,5 @@
 // Importa o React.
+// Importa o React.
 import React from "react";
 
 // Importa o componente Produtos.
@@ -10,7 +11,8 @@ import Produtos from "./Produtos";
 // https://ranekapi.origamid.dev/json/api/produto/notebook
 // Crie uma interface com 3 botões, um para cada produto. Ao clicar no botão faça um fetch a api e mostre os dados do produto na tela. Mostre apenas um produto por vez. Mostre a mensagem carregando... enquanto o fetch é realizado.
 
-const Exercicio = () => {
+// Cria um componente chamado App.
+const App = () => {
   const [dados, setDados] = React.useState(null); // Cria um estado chamado dados e inicializa com null.
   const [carregando, setCarregando] = React.useState(null); // Cria um estado chamado carregando e inicializa com null.
 
@@ -50,4 +52,4 @@ const Exercicio = () => {
   );
 };
 
-export default Exercicio; // Exporta o componente Exercise.
+export default App; // Exporta o componente App.

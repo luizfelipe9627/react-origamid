@@ -3,9 +3,7 @@ import ReactDOM from "react-dom/client";
 
 // Está importando o componente.
 import App from "./App.jsx";
-// import Exercicio from "./Exercicio/Exercicio.jsx";
+// import App from "./Exercicio/App.jsx";
 
 // Está renderizando o componente App no elemento com o ID root do HTML.
-// App.jsx é o componente de anotações utilizado em aula.
-// Execise.jsx é o componente de exercício.
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);

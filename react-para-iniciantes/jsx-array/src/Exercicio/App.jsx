@@ -20,8 +20,8 @@ const produtos = [
   },
 ];
 
-// Criado um componente chamado Exercicio.
-const Exercicio = () => {
+// Criado um componente chamado App.
+const App = () => {
   // O filter filtra os elementos da array produtos e retorna uma nova array com os elementos que passaram no filtro.
   // Está desestruturando(pegando apenas o atributo preco) o atributo preco de cada objeto da array produtos.
   const dadosFiltrados = produtos.filter(({ preco }) =>
@@ -56,4 +56,4 @@ const Exercicio = () => {
   );
 };
 
-export default Exercicio; // Está exportando o componente Exercicio.
+export default App; // Está exportando o componente App.

@@ -24,8 +24,8 @@ const mario = {
   ativa: false,
 };
 
-// Criado um componente chamado Exercicio.
-const Exercicio = () => {
+// Criado um componente chamado App.
+const App = () => {
   const dados = luana;
 
   // Criado uma constante chamada total que recebe o valor de todas as compras somadas.
@@ -55,4 +55,4 @@ const Exercicio = () => {
   );
 };
 
-export default Exercicio; // Está exportando o componente Exercicio.
+export default App; // Está exportando o componente App.
