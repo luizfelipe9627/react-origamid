@@ -1,8 +1,8 @@
 import React from "react"; // Importa o React.
 
 // Hooks são funções que permitem utilizar o state e outros recursos do React sem escrever uma classe.
-// Criado um componente chamado UseState1.
-const UseState1 = () => {
+// Criado um componente chamado UseState.
+const UseState = () => {
   //* > Estado.
 
   let activeTest = false; // Criado uma variável chamada activeTest e atribuido o valor false.
@@ -45,6 +45,23 @@ const UseState1 = () => {
   // Criado uma função chamada handleClick4 responsável por alterar o valor do estado através da função setPerson.
   function handleClick4() {
     setPerson({ ...person, study: "Estuda" }); // Altera o valor do estado, adicionando o atributo study com o valor Estuda.
+  }
+
+  const [count, setCount] = React.useState(1); // Criado uma constante chamada count que é responsável por armazenar o valor do estado e setCount que é uma função responsável por alterar o valor do estado. Por padrão, o valor do estado é 1.
+
+  const [items, setItems] = React.useState(["Item 1"]); // Criado uma constante chamada items que é responsável por armazenar o valor do estado e setItems que é uma função responsável por alterar o valor do estado. Por padrão, o valor do estado é ["Item 1"].
+
+  // Criado uma função chamada handleClick5 que é responsável por alterar o valor do estado count.
+  function handleClick5() {
+    // O setCount atualiza o valor do estado count, sendo assim, o valor do estado count será incrementado em 1.
+    setCount((count) => {
+      // setItems((items) => [...items, "Item " + (items.length + 1)]); // No segundo click irá dar erro, pois o Strict Mode não permite que o estado seja alterado dentro de um evento, sendo assim, o estado items não será atualizado.
+
+      return count + 1; // Atribui o valor do estado count + 1.
+    });
+
+    // Irá funcionar pois o Strict Mode permite que o estado seja alterado dentro de um evento.
+    setItems([...items, "Item " + (items.length + 1)]); // O setItems atualiza o valor do estado items, usando ...items para manter os valores anteriores e adicionando um novo valor no final do array contendo o texto "Item" e o tamanho do array items + 1.
   }
 
   // Retorna um botão com o texto Ativo ou Inativo.
@@ -94,8 +111,17 @@ const UseState1 = () => {
           {person ? "Mostrar" : "Inativo"}
         </button>
       </div>
+
+      <h3>Strict Mode</h3>
+      <div>
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+
+        <button onClick={handleClick5}>{count}</button>
+      </div>
     </React.Fragment>
   );
 };
 
-export default UseState1; // Está exportando o componente UseState1.
+export default UseState; // Está exportando o componente UseState.

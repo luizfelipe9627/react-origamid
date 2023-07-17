@@ -24,9 +24,9 @@ const mario = {
   ativa: false,
 };
 
-// Criado um componente chamado Exercise.
-const Exercise = () => {
-  const dados = luana; //
+// Criado um componente chamado Exercicio.
+const Exercicio = () => {
+  const dados = luana;
 
   // Criado uma constante chamada total que recebe o valor de todas as compras somadas.
   // O map é utilizado para percorrer o array de compras e retornar um novo array com os valores do preço.
@@ -55,4 +55,4 @@ const Exercise = () => {
   );
 };
 
-export default Exercise; // Está exportando o componente Exercise.
+export default Exercicio; // Está exportando o componente Exercicio.
