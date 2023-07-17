@@ -1,3 +1,4 @@
+// Importando o React.
 import React from "react";
 
 // Criado um componente chamado ModalContent que como seu parâmetro recebe a desestruturação({ modal, setModal }) do componente Modal.
