@@ -5,6 +5,7 @@ import React from "react";
 const ModalContent = ({ modal, setModal }) => {
   // Se o valor do estado for true, o modal será exibido.
   if (modal) {
+    // Retorna um elemento div com um botão que ao ser clicado, executará a função setModal, alterando o valor do estado para false.
     return (
       <div>
         {/* Quando clicado no botão, a função setModal será executada, alterando o valor do estado para false. */}

@@ -36,7 +36,9 @@ const App = () => {
     setProduto(target.innerText); // Está atualizando o valor do state(estado) produto, pegando o texto do botão e adicionando no state(estado) produto.
   }
 
+  // Retorna um elemento React.Fragment com 2 botões e um componente Produtos.
   return (
+    // O React.Fragment é utilizado para retornar mais de um elemento sem precisar colocar uma div.
     <React.Fragment>
       <h1>Preferência: {produto}</h1>
 

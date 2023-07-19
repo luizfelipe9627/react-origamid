@@ -17,6 +17,7 @@ const Formulario = () => {
 
   const inputElement = React.useRef(); // Criado uma referência chamada inputElement.
 
+  // Retorna um elemento div com um ul que contém um li para cada item do array comentarios, um input controlado e um botão.
   return (
     <div>
       <ul>

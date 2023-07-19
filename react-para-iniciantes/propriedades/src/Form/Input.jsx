@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Criado um componente chamado Input que recebe uma desestruturação responsável por retornar o label e o id que foi passada no componente e o ...props que é responsável por retornar todas as propriedades que foram passadas após o id, que no caso é o required e o type.

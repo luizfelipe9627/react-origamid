@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Importa o componente.

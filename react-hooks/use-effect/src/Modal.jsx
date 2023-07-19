@@ -20,6 +20,7 @@ const Modal = () => {
     };
   }, []);
 
+  // Retorna um elemento div com um parágrafo.
   return (
     <div style={{ height: "200vh" }}>
       <p>Meu modal</p>

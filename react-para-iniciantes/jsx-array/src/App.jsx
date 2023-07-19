@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Criado um componente chamado App.
@@ -16,6 +16,7 @@ const App = () => {
     { name: "A Storm of Swords", year: 2000 },
   ];
 
+  // Retorna um elemento React.Fragment com o conteúdo da variável products, uma ul com o conteúdo da variável movies e uma ul com o conteúdo da variável books.
   return (
     // O React.Fragment é utilizado para retornar mais de um elemento sem precisar colocar uma div.
     <React.Fragment>

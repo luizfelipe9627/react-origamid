@@ -14,6 +14,7 @@ const Modal = () => {
   // return activeModal;
   // });
 
+  // Retorna os componentes ButtonModal e ModalContent.
   return (
     <div>
       {/* Chamado os componentes e passa o valor do estado e a função setModal como parâmetro. */}

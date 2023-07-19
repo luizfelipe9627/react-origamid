@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Importa os componentes.
@@ -19,7 +19,7 @@ const Title2 = (props) => {
 
 // Criado um componente chamado App.
 const App = () => {
-  // Retorna uma div com o text App React.
+  // Retorna um elemento div com 3 componentes Title1 e um componente Title2.
   return (
     <div>
       {/* Chama o componente Title e passa o parâmetro color com o valor atribuido e o parâmetro text com o valor atribuido. */}

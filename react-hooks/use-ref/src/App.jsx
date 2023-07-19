@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Importa os componentes.
@@ -7,10 +7,11 @@ import Notificacao from "./Notificacao";
 
 // Criado um componente chamado App.
 const App = () => {
+  // Retorna os componentes Formulario e Notificacao.
   return (
     <React.Fragment>
       <Formulario />
-      <br/>
+      <br />
       <Notificacao />
     </React.Fragment>
   );

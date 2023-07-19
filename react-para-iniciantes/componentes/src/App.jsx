@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Importa os componentes.
@@ -21,6 +21,7 @@ const Teste = () => {
 
 // Criado um componente chamado App.
 const App = () => {
+  // Retorna um React.Fragment com os componentes Header, Form e Footer.
   return (
     // O React.Fragment é utilizado para retornar mais de um elemento sem precisar colocar uma div.
     <React.Fragment>

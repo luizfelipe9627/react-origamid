@@ -1,5 +1,5 @@
-// Importa o React.
-import React from "react"; 
+// Importa a biblioteca React.
+import React from "react";
 
 // Hooks são funções que permitem utilizar o state e outros recursos do React sem escrever uma classe.
 // Criado um componente chamado UseState.

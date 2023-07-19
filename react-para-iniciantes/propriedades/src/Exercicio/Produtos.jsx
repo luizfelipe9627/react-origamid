@@ -1,10 +1,11 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Importa os componentes.
 import Titulo from "./Titulo";
 import Produto from "./Produto";
 
+// Criado um componente chamado Produtos.
 const Produtos = () => {
   // Replique a interface como a apresentada na aula
   // Utilize a array abaixo para mostrar os produtos

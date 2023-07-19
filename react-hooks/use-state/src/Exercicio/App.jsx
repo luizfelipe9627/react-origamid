@@ -1,5 +1,5 @@
-// Importa o React.
-// Importa o React.
+// Importa a biblioteca React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Importa o componente Produtos.
@@ -30,7 +30,9 @@ const App = () => {
     setCarregando(false); // Altera o estado carregando para false.
   }
 
+  // Retorna um elemento React.Fragment com 3 botões e um componente Produtos.
   return (
+    // O React.Fragment é utilizado para retornar mais de um elemento sem precisar colocar uma div.
     <React.Fragment>
       {/* Cria 3 botões que ao serem clicados chamam a função handleClick. */}
       <button style={{ margin: ".5rem" }} onClick={handleClick}>

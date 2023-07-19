@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Criado um componente chamado Produto que recebe uma desestruturação responsável por retornar o nome e as propriedades que foi passada no componente presente no arquivo Produtos.jsx.

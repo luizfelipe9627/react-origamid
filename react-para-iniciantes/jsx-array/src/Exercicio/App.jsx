@@ -29,6 +29,7 @@ const App = () => {
     Number(preco.replace("R$ ", "") > 1500),
   );
 
+  // Retorna uma section com o conteúdo da variável dadosFiltrados.
   return (
     <section>
       {/* O map passa por cada elemento da array e a cada iteração retorna os atributos desestruturados de cada objeto. */}

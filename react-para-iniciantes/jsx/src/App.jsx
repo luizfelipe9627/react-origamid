@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Criado um componente chamado App.
@@ -36,6 +36,8 @@ const App = () => {
   // O htmlFor é utilizado para adicionar um for no elemento.
   // O style é utilizado para adicionar um estilo no elemento.
   // Usamos os {} para adicionar um código JS dentro do HTML.
+  
+  // Retorna um elemento React.Fragment com um título, um link, um label, um input, um parágrafo e o ano atual.
   return (
     // O React.Fragment é utilizado para retornar mais de um elemento sem precisar colocar uma div.
     <React.Fragment>

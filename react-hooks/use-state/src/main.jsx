@@ -1,8 +1,6 @@
-// Está importando a biblioteca ReactDOM.
-import ReactDOM from "react-dom/client";
-
-// Está importando o React.
+// Está importando as bibliotecas React e ReactDOM.
 import React from "react";
+import ReactDOM from "react-dom/client";
 
 // Está importando o componente.
 import App from "./App.jsx";

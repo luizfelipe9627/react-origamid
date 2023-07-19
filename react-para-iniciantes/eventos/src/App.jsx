@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Criado um componente chamado App.
@@ -15,6 +15,7 @@ const App = () => {
     console.log(event); // Imprime no console a palavra Scroll.
   }
 
+  // Retorna um elemento div com 2 botões que ao serem clicados executam a função handleClick.
   return (
     // Criado um elemento div com a propriedade style que define a altura da div como 200vh.
     <div style={{ height: "200vh" }}>

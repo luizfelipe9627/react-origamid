@@ -1,4 +1,4 @@
-// Importa o React.
+// Importa a biblioteca React.
 import React from "react";
 
 // Importa os componentes.
@@ -9,7 +9,7 @@ import Button from "./Button";
 const Form = () => {
   const array = ["Item 1", "Item 2", "Item 3"]; // Criado uma variável array que recebe um array com três itens.
 
-  // Retorna um formulário com um input e um botão.
+  // Retorna um elemento div com 3 componentes Input e um componente Button.
   return (
     <div>
       {/* Chama o componente Input e passa o parâmetro label e id com o valor atribuido para cada um. */}

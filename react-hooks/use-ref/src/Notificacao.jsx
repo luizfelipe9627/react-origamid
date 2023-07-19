@@ -20,6 +20,7 @@ const Notificacao = () => {
     }, 2000);
   }
 
+  // Retorna um elemento div com um parágrafo e um botão.
   return (
     <div>
       <p>{notificacao}</p>
