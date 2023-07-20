@@ -3,7 +3,7 @@ import React from "react";
 
 // Está criando um componente chamado Produtos.
 const Produtos = ({ produto }) => {
-  const [dados, setDados] = React.useState(null); // O useState é um Hook que permite adicionar o state do React a um componente de função. Ele retorna um array com 2 posições, a primeira é o valor do state(estado) e a segunda é uma função para atualizar o valor do state(estado).
+  const [data, setData] = React.useState(null); // O useState é um Hook que permite adicionar o state do React a um componente de função. Ele retorna um array com 2 posições, a primeira é o valor do state(estado) e a segunda é uma função para atualizar o valor do state(estado).
 
   // O useEffect será executado toda vez que o componente for renderizado, atualizado ou executado, mas somente quando o valor do state(estado) produto for alterado.
   React.useEffect(() => {
@@ -13,17 +13,17 @@ const Produtos = ({ produto }) => {
       fetch(`https://ranekapi.origamid.dev/json/api/produto/${produto}`)
         // O then retorna a resposta da requisição e transforma em JSON.
         .then((response) => response.json())
-        // O then retorna o JSON da requisição e atualiza o valor do state(estado) dados para o JSON da requisição.
-        .then((json) => setDados(json));
+        // O then retorna o JSON da requisição e atualiza o valor do state(estado) data para o JSON da requisição.
+        .then((json) => setData(json));
     }
   }, [produto]);
 
-  // Se o valor do state(estado) dados for diferente de null, então será retornado o nome e o preço do produto, senão será retornado null.
-  if (dados !== null) {
+  // Se o valor do state(estado) data for diferente de null, então será retornado o nome e o preço do produto, senão será retornado null.
+  if (data !== null) {
     return (
       <div>
-        <h2>{dados.nome}</h2>
-        <p>R$ {dados.preco}</p>
+        <h2>{data.nome}</h2>
+        <p>R$ {data.preco}</p>
       </div>
     );
   } else {

@@ -26,7 +26,7 @@ const App = () => {
 
   //* > UseEffect com dependência([]) e fetch.
 
-  const [dados, setDados] = React.useState(null); // O useState é um Hook que permite adicionar o state do React a um componente de função. Ele retorna um array com 2 posições, a primeira é o valor do state(estado) e a segunda é uma função para atualizar o valor do state(estado).
+  const [data, setData] = React.useState(null); // O useState é um Hook que permite adicionar o state do React a um componente de função. Ele retorna um array com 2 posições, a primeira é o valor do state(estado) e a segunda é uma função para atualizar o valor do state(estado).
 
   // O useEffct executa o callback apenas uma vez quando o componente for renderizado, atualizado ou executado pois o array está vazio.
   React.useEffect(() => {
@@ -34,8 +34,8 @@ const App = () => {
     fetch("https://ranekapi.origamid.dev/json/api/produto/notebook")
       // O then retorna a resposta da requisição e transforma em JSON.
       .then((response) => response.json())
-      // O then retorna o JSON da requisição e atualiza o valor do state(estado) dados.
-      .then((json) => setDados(json));
+      // O then retorna o JSON da requisição e atualiza o valor do state(estado) data.
+      .then((json) => setData(json));
   }, []);
 
   //* > UseEffect utilizando Modal.
@@ -51,12 +51,12 @@ const App = () => {
 
       <h1>UseEffect utilizando Fetch</h1>
       <div>
-        {/* Se dados for true, no caso se existir dados, então exibe a div. */}
-        {dados && (
+        {/* Se data for true, no caso se existir data, então exibe a div. */}
+        {data && (
           <div>
-            <h3>{dados.nome}</h3>
+            <h3>{data.nome}</h3>
             {/* Pega o preco e multiplica pelo count */}
-            <p>R$ {dados.preco * count}</p>
+            <p>R$ {data.preco * count}</p>
           </div>
         )}
       </div>

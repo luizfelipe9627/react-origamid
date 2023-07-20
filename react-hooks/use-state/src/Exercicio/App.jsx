@@ -13,11 +13,11 @@ import Produtos from "./Produtos";
 
 // Cria um componente chamado App.
 const App = () => {
-  const [dados, setDados] = React.useState(null); // Cria um estado chamado dados e inicializa com null.
-  const [carregando, setCarregando] = React.useState(null); // Cria um estado chamado carregando e inicializa com null.
+  const [data, setData] = React.useState(null); // Cria um estado chamado data e inicializa com null.
+  const [loading, setLoading] = React.useState(null); // Cria um estado chamado loading e inicializa com null.
 
   async function handleClick(event) {
-    setCarregando(true); // Altera o estado carregando para true.
+    setLoading(true); // Altera o estado loading para true.
 
     const response = await fetch(
       `https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText}`,
@@ -25,9 +25,9 @@ const App = () => {
 
     const json = await response.json(); // Criado uma constante chamada json que recebe o resultado da função em formato JSON após a requisição ser feita. O await serve para esperar a requisição ser feita antes de continuar o código.
 
-    setDados(json); // Altera o estado dados para o valor de json.
+    setData(json); // Altera o estado data para o valor de json.
 
-    setCarregando(false); // Altera o estado carregando para false.
+    setLoading(false); // Altera o estado loading para false.
   }
 
   // Retorna um elemento React.Fragment com 3 botões e um componente Produtos.
@@ -45,11 +45,11 @@ const App = () => {
         tablet
       </button>
 
-      {/* Se carregando for true, mostra a mensagem "Carregando..."*/}
-      {carregando && <p>Carregando...</p>}
+      {/* Se loading for true, mostra a mensagem "loading..."*/}
+      {loading && <p>loading...</p>}
 
-      {/* Se carrergando for false e dados for true, mostra o componente Produtos. */}
-      {!carregando && dados && <Produtos dados={dados} />}
+      {/* Se carrergando for false e data for true, mostra o componente Produtos. */}
+      {!loading && data && <Produtos data={data} />}
     </React.Fragment>
   );
 };

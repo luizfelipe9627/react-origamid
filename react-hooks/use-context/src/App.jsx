@@ -6,7 +6,7 @@ import UserContext from "./UserContext";
 import Produto1 from "./Produto1";
 import Produto2 from "./Produto2";
 
-import { GlobalContext, GlobalStorage } from "./GlobalContext";
+import { GlobalStorage } from "./GlobalContext";
 
 // Criado um componente chamado App.
 const App = () => {
