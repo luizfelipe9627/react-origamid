@@ -26,6 +26,7 @@ const App = () => {
         <label>
           <input
             type="checkbox"
+            // O value está sendo usado para passar o valor do estado colors para o target.
             value="termos"
             // O atributo checked é usado para marcar o checkbox como checado ou não, passa o valor do estado checkbox então se o checkbox for true o checkbox será marcado.
             checked={checkbox}
@@ -42,6 +43,7 @@ const App = () => {
         <label>
           <input
             type="checkbox"
+            // O value está sendo usado para passar o valor do estado colors para o target.
             value="azul"
             // O atributo checked é usado para marcar o checkbox como checado ou não, passa o valor do estado colors e usa o includes para verificar se o valor passado está dentro do estado colors se estiver retorna true e marca o checkbox se não retorna false e desmarca o checkbox.
             checked={colors.includes("azul")}
@@ -54,6 +56,7 @@ const App = () => {
         <label>
           <input
             type="checkbox"
+            // O value está sendo usado para passar o valor do estado colors para o target.
             value="vermelho"
             // O atributo checked é usado para marcar o checkbox como checado ou não, passa o valor do estado colors e usa o includes para verificar se o valor passado está dentro do estado colors se estiver retorna true e marca o checkbox se não retorna false e desmarca o checkbox.
             checked={colors.includes("vermelho")}
