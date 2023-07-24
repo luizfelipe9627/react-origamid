@@ -10,9 +10,9 @@ const App = () => {
   function handleChange({ target }) {
     // Se o target(elemento clicado) for checado então executa o bloco de código do if.
     if (target.checked) {
-      setColors([...colors, target.value]); // O estado colors recebe uma array com os valores anteriores do estado colors e o valor do target(elemento clicado) atual. O estado colors é atualizado com a nova array.
+      setColors([...colors, target.value]); // O estado colors recebe uma array com os valores anteriores do estado colors e o valor do target(elemento clicado) atual.
     } else {
-      setColors(colors.filter((color) => color !== target.value)); // O filter está sendo usado para filtrar os valores do estado colors, se o valor do estado colors for diferente do valor do target(elemento clicado) então o valor é retornado para a nova array e o estado colors é atualizado com a nova array.
+      setColors(colors.filter((color) => color !== target.value)); // O filter está sendo usado para filtrar os valores do estado colors, se o valor do estado colors for diferente do valor do target(elemento clicado) então retorna true e o valor é mantido na array, se o valor do estado colors for igual ao valor do target(elemento clicado) então retorna false e o valor é removido da array.
     }
   }
 
