@@ -5,7 +5,7 @@ import React from "react";
 const App = () => {
   const [textarea, setTextarea] = React.useState(""); // Criado um estado com o nome textarea e uma função com o nome setTextarea para atualizar o estado. Começa por padrão com uma string vazia.
 
-  // Retorna um formulário com um textarea.
+  // Retorna um formulário com um textarea com o valor do estado textarea, o evento onChange que chama a função setTextarea passando o valor do target(elemento clicado) e o evento onBlur que chama a função setTextarea passando o valor do target(elemento clicado).
   return (
     <form>
       <textarea

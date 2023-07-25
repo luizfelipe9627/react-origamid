@@ -25,7 +25,7 @@ const App = () => {
     }
   }
 
-  // Retorna uma div com o texto App React.
+  // Retorna um formulário com um Input do tipo text com o label CEP, id cep, value igual ao estado cep, onChange igual ao handleChange, placeholder 00000-000 e onBlur igual ao handleBlur.
   return (
     <form onSubmit={handleSubmit}>
       <Input

@@ -12,7 +12,7 @@ const Input = ({
   placeholder,
   error,
 }) => {
-  // Retorna um label e um input.
+  // Retorna um formulário com um label, um input e um parágrafo.
   return (
     // O React.Fragment é utilizado para retornar mais de um elemento sem precisar colocar uma div.
     <React.Fragment>

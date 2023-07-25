@@ -20,7 +20,7 @@ const App = () => {
   const [languages, setLanguages] = React.useState([]);
   const [terms, setTerms] = React.useState([]);
 
-  // Retorna uma div com o texto App React.
+  // Retorna um formulário com um Input do tipo text com o label Nome, id name, value igual ao estado name, onChange igual ao setName e um Input do tipo email com o label Email, id email, value igual ao estado email, onChange igual ao setEmail.
   return (
     <form>
       <h2>Input</h2>

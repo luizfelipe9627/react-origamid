@@ -7,7 +7,7 @@ import Form2 from "./Form2";
 
 // Criado um componente chamado App.
 const App = () => {
-  // Retorna o formulário com dois inputs e um botão.
+  // Retorna dois componentes Form1 e Form2 que estão dentro de um fragmento.
   return (
     <React.Fragment>
       <h1>Form com useState usando string</h1>

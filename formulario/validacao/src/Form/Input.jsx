@@ -3,7 +3,7 @@ import React from "react";
 
 // Criado um componente chamado Input que recebe os atributos label, id e props que armazena todas as propriedades definidas no componente Input do arquivo App.jsx que não foram desestruturadas(que não foram passadas como parâmetro).
 const Input = ({ label, id, ...props }) => {
-  // Retorna um label e um input.
+  // Retorna um React.Fragment com um label com o texto da propriedade label e um input do tipo text com o id igual ao id do componente App e o restante das propriedades definidas no componente Input do arquivo App.jsx que não foram desestruturadas(que não foram passadas como parâmetro).
   return (
     // O React.Fragment é utilizado para retornar mais de um elemento sem precisar colocar uma div.
     <React.Fragment>

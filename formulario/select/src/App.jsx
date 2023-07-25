@@ -5,7 +5,7 @@ import React from "react";
 const App = () => {
   const [select, setSelect] = React.useState(""); // Criado um estado chamado select uma função para atualizar o estado chamada setSelect e o valor inicial do estado é vazio mas poderia ser qualquer outro valor como por exemplo notebook que iria aparecer selecionado no select.
 
-  // Retorna uma div com o texto App React.
+  // Retorna um formulário com um select com o valor inicial notebook, quando o valor do select for alterado executa o onChange que pega o target(value) do elemento clicado e atualiza o estado select com o novo valor.
   return (
     <form>
       {/* Criado um select com o valor inicial notebook, quando o valor do select for alterado executa o onChange que pega o target(value) do elemento clicado e atualiza o estado select com o novo valor. */}

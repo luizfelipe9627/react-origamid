@@ -1,0 +1,11 @@
+.title {
+  color: #43c;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.buy {
+  transform: rotate(5deg);
+}

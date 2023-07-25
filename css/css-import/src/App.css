@@ -1,0 +1,9 @@
+.container {
+  height: 20px;
+  background-color: tomato;
+}
+
+/*  Não aplicado pois o .title do App.css tem mais força, pelo motivo de estar sendo importado por último. */
+.title {
+  color: blue;
+}

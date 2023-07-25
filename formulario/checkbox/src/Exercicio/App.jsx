@@ -26,7 +26,7 @@ const App = () => {
     }
   }
 
-  // Retorna um formuário com os checkbox.
+  // Retorna um formulário com um label e um input do tipo checkbox para cada valor da array coresArray.
   return (
     <form>
       {/* O map está sendo usado para percorrer a array coresArray e retornar um label com um input do tipo checkbox para cada valor(cor) da array, o index mostra a posição do valor na array. */}

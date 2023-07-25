@@ -12,6 +12,7 @@ const Radio = ({
 }) => {
   if (active === false) return null; // Se o active for false, retorna null(que é nada).
 
+  // Retorna um fieldset com uma legenda com o texto da propriedade pergunta, um map que percorre a array options e retorna um label com um input do tipo radio com o value igual ao option, onChange igual ao onChange do componente App, id igual ao id do componente App e checked igual ao value do componente App igual ao option.
   return (
     <fieldset
       style={{

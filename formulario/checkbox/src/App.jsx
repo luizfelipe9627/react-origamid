@@ -16,7 +16,7 @@ const App = () => {
     }
   }
 
-  // Retorna uma div com o texto App React.
+  // Retorna um formulário com um input do tipo checkbox com o value termos, o estado checkbox como checked, o evento onChange que chama a função setCheckbox passando o valor do target(elemento clicado) e um label com o texto Li e aceito os termos.
   return (
     <React.Fragment>
       <h1>Checkbox único</h1>

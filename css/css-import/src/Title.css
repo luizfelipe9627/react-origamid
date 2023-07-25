@@ -1,0 +1,8 @@
+h1 {
+  color: green;
+}
+
+/* Vai sobreescrever o .title do App.css */
+.title {
+  color: red;
+}

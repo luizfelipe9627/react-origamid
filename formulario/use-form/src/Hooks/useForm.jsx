@@ -58,4 +58,4 @@ const useForm = (type) => {
   };
 };
 
-export default useForm;
+export default useForm; // Está exportando o componente useForm.

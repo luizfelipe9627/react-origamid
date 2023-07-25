@@ -6,7 +6,7 @@ const App = () => {
   const [radio, setRadio] = React.useState(""); // Criado um estado chamado radio e uma função setRadio para alterar o estado radio. O estado radio está recebendo uma string vazia como valor inicial.
   const [color, setColor] = React.useState(""); // Criado um estado chamado color e uma função setColor para alterar o estado color. O estado color está recebendo uma string vazia como valor inicial.
 
-  // Retorna uma div com o texto App React.
+  // Retorna um formulário com dois radios, um com o value smartphone e outro com o value notebook, o estado radio é usado para verificar qual radio está selecionado, o evento onChange é usado para atualizar o estado radio com o valor do target(elemento clicado).
   return (
     <form>
       <h2>Produtos</h2>
