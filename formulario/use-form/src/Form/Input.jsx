@@ -16,13 +16,21 @@ const Input = ({
   return (
     // O React.Fragment é utilizado para retornar mais de um elemento sem precisar colocar uma div.
     <React.Fragment>
+      {/* Está sendo passado pelo parâmetro o atributo label e o atributo htmlFor do label está recebendo o valor do atributo id. */}
       <label htmlFor={id}>{label}</label>
       <input
-        type="text"
+        // Está pegando do parâmetro os atributos id, name, onChange, placeholder, value, onBlur e type e atribuindo seus valores definidos no App para os atributos do input.
+        type={type}
         id={id}
-        // O name serve para ao enviar o formulário, o valor do input ser enviado com o nome do input e também para o input ser associado ao label.
         name={id}
+        placeholder={placeholder}
+        value={value.value}
+        onBlur={onBlur}
+        onChange={onChange}
       />
+
+      {/* Se o estado error for verdadeiro(true) mostra o parágrafo com a mensagem de erro. */}
+      {error && <p>{error}</p>}
     </React.Fragment>
   );
 };
