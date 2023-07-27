@@ -45,6 +45,7 @@ const Slide = ({ slides }) => {
         className={styles.content}
         style={{ transform: `translateX(${position}px)` }}
       >
+        {/* Está mapeando o array slides e retornando uma figura com a classe item que contém uma imagem e uma legenda. */}
         {slides.map((slide) => {
           return (
             <figure key={slide.id} className={styles.item}>
@@ -56,6 +57,7 @@ const Slide = ({ slides }) => {
       </div>
 
       <nav className={styles.nav}>
+        {/* Adiciona um evento de clique nos botões, que ao clicar executa a função slidePrev ou slideNext. */}
         <button onClick={slidePrev}>Anterior</button>
         <button onClick={slideNext}>Próximo</button>
       </nav>
