@@ -1,0 +1,45 @@
+.container {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  /* Aplica uma animação no transform do elemento quando o elemento for alterado. */
+  transition: transform .3s ease;
+}
+
+.item {
+  /* O flex-shrink: 0 faz com que o elemento não diminua de tamanho mesmo que o conteudo seja maior que o tamanho do elemento ou tela. */
+  flex-shrink: 0;
+  width: 80%;
+  /* O margin: 0 10% faz com que o elemento fique com 10% de margem nas laterais, assim fazendo com que cada item fique com 100% da tela. */
+  margin: 0 10%;
+  background-color: #000;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.item img {
+  max-width: 100%;
+  display: block;
+  opacity: 0.5;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.item figcaption {
+  color: #fff;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+  width: 80%;
+}

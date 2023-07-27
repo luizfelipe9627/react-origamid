@@ -1,0 +1,32 @@
+/* Animação que faz com que o elemento apareça da esquerda para a direita. */
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  /* O forwards faz com que a animação permaneça no estado final. */
+  animation: animation .3s forwards;
+}
+
+/* Animação que faz com que o elemento apareça de cima para baixo. */
+.animeTop {
+  opacity: 0;
+  transform: translateY(-20px);
+  /* O forwards faz com que a animação permaneça no estado final. */
+  animation: animation .3s forwards;
+}
+
+/* Animação que faz com que o elemento apareça aumentando de tamanho. */
+.animeZoom {
+  opacity: 0;
+  transform: scale(.8);
+  /* O forwards faz com que a animação permaneça no estado final. */
+  animation: animation .3s forwards;
+}
+
+@keyframes animation {
+
+  /* Ao ativar a animação a opacidade vai de 0 para 1 e o transform de -20px para 0. */
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
