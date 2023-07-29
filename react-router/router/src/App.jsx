@@ -1,7 +1,7 @@
 // Importa a biblioteca React.
 import React from "react";
 
-// Importa o BrowserRouter, Routes e Route do react-router-dom.
+// Importa os componentes da biblioteca react-router-dom.
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Importa os componentes.
@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 // Criado um componente chamado App.
 const App = () => {
-  // Retorna uma div com o texto App React.
+  // Retorna o componente BrowserRouter, encapsulando o componente Header, Routes e Footer.
   return (
     // O BrowserRouter é o componente que vai encapsular toda a aplicação.
     <BrowserRouter>
