@@ -25,17 +25,16 @@ const Header = () => {
       <Link to="/">Home</Link> | <Link to="/about">About</Link>
       <h4>NavLink</h4>
       {/* O NavLink é responsável por adicionar uma classe ao link quando ele estiver ativo, ou seja, quando a rota for acessada. */}
-      {/* O atributo activeClassName é a classe que vai ser adicionada ao link quando ele estiver ativo. */}
       {/* O atributo end é usado para indicar que a rota só vai ser acessada se for exatamente o caminho indicado no atributo to. */}
-      <NavLink to="/" activeclassname="active" end>
+      <NavLink to="/" end>
         Home
       </NavLink>
       {" | "}
-      <NavLink to="/about" activeclassname="active">
+      <NavLink to="/about">
         About
       </NavLink>
       {" | "}
-      <NavLink to="/login" activeclassname="active">
+      <NavLink to="/login">
         Login
       </NavLink>
     </nav>
